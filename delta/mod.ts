@@ -4,6 +4,7 @@ import inline from "./inline.ts";
 import { Bot } from "../deps.ts";
 import about from "./about.ts";
 import groups from "./groups.ts";
+import run from "./run.ts";
 
 export default async (bot: Bot) => {
   await bot
@@ -11,5 +12,6 @@ export default async (bot: Bot) => {
     .use(help)
     .use(inline)
     .use(groups)
-    .use(about);
+    .use(about)
+    .use(run);
 };
