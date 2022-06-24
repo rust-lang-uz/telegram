@@ -22,6 +22,7 @@ composer.command("group", async (ctx: Context): Promise<void> => {
   await ctx.reply(ctxMenuText, {
     parse_mode: "HTML",
     reply_markup: keyboard,
+    disable_web_page_preview: true
   });
 });
 
@@ -47,6 +48,7 @@ composer.callbackQuery(/^group_(\d+)$/, async (ctx: Context) => {
   await ctx.editMessageText(ctxMenuText, {
     parse_mode: "HTML",
     reply_markup: keyboard,
+    disable_web_page_preview: true
   });
 });
 
