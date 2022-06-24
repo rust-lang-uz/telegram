@@ -53,7 +53,7 @@ composer.inlineQuery(/(.*)/ig, async (ctx: Context): Promise<any> => {
               new Date(item.created_at).toLocaleString()
             }</code> \n` +
             `📰 <b>Description:</b> <code>${
-              (item.description.replaceAll(/(<|>|`)/ig, "")).substring(0, 30)
+              (item.description.replaceAll(/(<|>|`)/ig, "")).substring(0, 150)
             }${item.description.length > 30 ? "..." : ""}</code> \n\n` +
             `🔌 <b>Add (in your Cargo.toml):</b> \n` +
             `<code>[dependencies]</code>\n<code>${item.name} = "${item.max_stable_version}"</code>`,
