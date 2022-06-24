@@ -1,5 +1,6 @@
 // deno-lint-ignore-file no-explicit-any
 import { api, Composer, Context, InlineKeyboard } from "../deps.ts";
+import encoder from "../utils/encoder.ts";
 
 const composer = new Composer();
 
@@ -49,18 +50,22 @@ composer.inlineQuery(/(.*)/ig, async (ctx: Context): Promise<any> => {
             `📦 <b>Name:</b> ${item.name}` +
             `\n` +
             `🚨 <b>Last Version:</b> <code>${item.newest_version}</code> \n` +
+            `🎚 <b>Downloads:</b> recent: <code>${item.recent_downloads}</code> | all: <code>${item.downloads}</code> \n` +
             `⌚️ <b>Created:</b> <code>${
               new Date(item.created_at).toLocaleString()
             }</code> \n` +
+            `📡 <b>Updated:</b> <code>${
+              new Date(item.updated_at).toLocaleString()
+            }</code> \n` +
             `📰 <b>Description:</b> <code>${
-              (item.description.replaceAll(/(<|>|`)/ig, "")).substring(0, 100)
-            }${item.description.length > 30 ? "..." : ""}</code> \n\n` +
+              (encoder(item.description)).substring(0, 100)
+            }${item.description.length > 100 ? "..." : ""}</code> \n\n` +
             `🔌 <b>Add (in your Cargo.toml):</b> \n` +
             `<code>[dependencies]</code>\n<code>${item.name} = "${item.max_stable_version}"</code>`,
           parse_mode: "HTML",
         },
       })),
-      { cache_time: 1 },
+      { cache_time: 1 }, // { cache_time: 24 * 3600 },
     );
   }
 
