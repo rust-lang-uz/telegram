@@ -3,7 +3,7 @@ import communities from "../communities.json" assert { type: "json" };
 import pager from "../utils/pager.ts";
 
 const composer = new Composer();
-const ctxMenuText = "<b>List of Rust Language communities on Telegram:</b>";
+const ctxMenuText = "<b>List of Rust Language communities on Telegram:</b>\nIf you want to add your own community to our list, update our <a href='https://github.com/rust-lang-uz/telegram/blob/main/communities.json'>community.json</a>";
 
 composer.command("group", async (ctx: Context): Promise<void> => {
   const keyboard = new InlineKeyboard();
