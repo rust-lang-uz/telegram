@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Global Community",
+    "about": "Everything else is reducing, so use rust to oxidize the world.",
+    "telegram": "@rustdevs",
+    "link": "https://rust-lang.org"
+  },
+  {
+    "name": "Uzbek Community",
+    "about": "O'zbek Rust dasturchilariga qaratilgan jamiyat",
+    "telegram": "@rustlanguz",
+    "link": "https://rust-lang.uz"
+  },
+  {
+    "name": "Russian Community",
+    "about": "Rust — русскоговорящее сообщество",
+    "telegram": "@rustlang_ru",
+    "link": "https://rust-lang.ru"
+  },
+  {
+    "name": "Rust Offtopic",
+    "about": "The place where you can share anything (probably)...",
+    "telegram": "@offtopica"
+  }
+]
