@@ -9,7 +9,8 @@ composer.hears(/^\/run(.*)/g, async (ctx: Context): Promise<any> => {
   if (ctx.message!.text!.trim().length <= 4) {
     return await ctx.reply(
       "<b>You should enter some rusty code bruh!</b>\n\n<b>For example:</b>\n" +
-        '/run <code>fn main() {\n    println!("Hello, world!");\n}</code>',
+        '/run <code>fn main() {\n    println!("Hello, world!");\n}</code>\n\n' +
+        "<b>Btw, if you gonna send me some obscure loop shit, I'll simply ignore it :)</b>",
       {
         parse_mode: "HTML",
       },
