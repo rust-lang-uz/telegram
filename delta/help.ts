@@ -9,7 +9,7 @@ export const message = `<b>List of available commands:</b>` +
   `\n` +
   `/about - <code>briefly about this bot</code>` +
   `\n` +
-  `/groups - <code>rust communities</code>` +
+  `/group - <code>rust communities</code>` +
   `\n` +
   `\n` +
   `<b>Additionally, you can use inline mode to search packages from crates.io. Press the button below to get started!</b>`;
