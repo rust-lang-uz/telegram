@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 import { Composer, Context } from "../deps.ts";
 
 const composer = new Composer();
@@ -9,7 +10,7 @@ composer.hears(/^\/run(.*)/g, async (ctx: Context): Promise<any> => {
     });
   }
 
-  console.log(ctx.message!.text!.trim().length <= 4)
+  console.log(ctx.message!.text!.trim().length <= 4);
 
   const request = await fetch("https://play.rust-lang.org/execute", {
     method: "POST",
@@ -31,7 +32,9 @@ composer.hears(/^\/run(.*)/g, async (ctx: Context): Promise<any> => {
 
   await ctx.reply(
     `<b>📃 Result : (${response.success ? "✅ Success" : "❌ Failed"})</b> \n\n` +
-      `<b>Output:</b>\n<pre>${decodeURI(response.stdout)}</pre>\n<b>Terminal:</b>\n<pre>${decodeURI(response.stderr)}</pre>`,
+      `<b>Output:</b>\n<pre>${
+        decodeURI(response.stdout)
+      }</pre>\n<b>Terminal:</b>\n<pre>${decodeURI(response.stderr)}</pre>`,
     {
       parse_mode: "HTML",
       reply_to_message_id: ctx.message!.message_id,
