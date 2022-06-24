@@ -49,12 +49,12 @@ composer.inlineQuery(/(.*)/ig, async (ctx: Context): Promise<any> => {
             `📦 <b>Name:</b> ${item.name}` +
             `\n` +
             `🚨 <b>Last Version:</b> <code>${item.newest_version}</code> \n` +
-            `📰 <b>Description:</b> <code>${
-              (item.description.replaceAll(/(<|>|`)/ig, "")).substring(0, 30)
-            }${item.description.length > 30 ? "..." : ""}</code> \n` +
             `⌚️ <b>Created:</b> <code>${
               new Date(item.created_at).toLocaleString()
-            }</code> \n\n` +
+            }</code> \n` +
+            `📰 <b>Description:</b> <code>${
+              (item.description.replaceAll(/(<|>|`)/ig, "")).substring(0, 30)
+            }${item.description.length > 30 ? "..." : ""}</code> \n\n` +
             `🔌 <b>Add (in your Cargo.toml):</b> \n` +
             `<code>[dependencies]</code>\n<code>${item.name} = "${item.max_stable_version}"</code>`,
           parse_mode: "HTML",
