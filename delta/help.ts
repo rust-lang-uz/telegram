@@ -11,7 +11,7 @@ export const message = `<b>List of available commands:</b>` +
   `\n` +
   `/group - <code>rust communities</code>` +
   `\n` +
-  `/run &lt;code&gt; - <code>briefly about this bot</code>` +
+  `/run &lt;code&gt; - <code>run code and show stout & sterr</code>` +
   `\n` +
   `\n` +
   `<b>Additionally, you can use inline mode to search packages from crates.io. Press the button below to get started!</b>`;
