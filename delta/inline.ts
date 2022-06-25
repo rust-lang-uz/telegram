@@ -24,6 +24,7 @@ composer.inlineQuery(/(.*)/ig, async (ctx: Context): Promise<any> => {
             `\n` +
             `Please, check for typos and try again!.`,
           parse_mode: "HTML",
+          disable_web_page_preview: true
         },
       }]);
     }
@@ -89,6 +90,7 @@ composer.inlineQuery(/(.*)/ig, async (ctx: Context): Promise<any> => {
           `\n` +
           `<code>@rustaceanbot &lt;name&gt;</code>`,
         parse_mode: "HTML",
+        disable_web_page_preview: true
       },
     }]);
   }
