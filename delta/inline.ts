@@ -63,6 +63,7 @@ composer.inlineQuery(/(.*)/ig, async (ctx: Context): Promise<any> => {
             `🔌 <b>Add (in your Cargo.toml):</b> \n` +
             `<code>[dependencies]</code>\n<code>${item.name} = "${item.max_stable_version}"</code>`,
           parse_mode: "HTML",
+          disable_web_page_preview: true
         },
       })),
       { cache_time: 1 }, // { cache_time: 24 * 3600 },
