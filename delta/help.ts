@@ -9,6 +9,10 @@ export const message = `<b>List of available commands:</b>` +
   `\n` +
   `/about - <code>briefly about this bot</code>` +
   `\n` +
+  `/last - <code>get short info about latest version</code>` +
+  `\n` +
+  `/version - <code>get information about specific version</code>` +
+  `\n` +
   `/group - <code>rust communities</code>` +
   `\n` +
   `/run &lt;code&gt; - <code>run code and show stout & sterr</code>` +
