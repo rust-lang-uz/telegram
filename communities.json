@@ -12,10 +12,20 @@
     "link": "https://rust-lang.uz"
   },
   {
+    "name": "English Community",
+    "about": "A channel to share rust tutorials and projects for beginners",
+    "telegram": "@rustlang_en"
+  },
+  {
     "name": "Russian Community",
     "about": "Rust — русскоговорящее сообщество",
     "telegram": "@rustlang_ru",
     "link": "https://rust-lang.ru"
+  },
+  {
+    "name": "pub ThisWeekInRust {}",
+    "about": "Handpicked Rust updates, delivered to your telegram.",
+    "telegram": "this_week_in_rust"
   },
   {
     "name": "Rust Offtopic",
