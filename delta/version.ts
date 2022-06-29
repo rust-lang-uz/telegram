@@ -74,6 +74,8 @@ composer.callbackQuery(/^changelog_(\d+)_(\d+)$/, async (ctx: Context) => {
       `\n` +
       `<b>Published at:</b>${new Date(data.published_at).toDateString()}` +
       `\n` +
+      `<b>Install:</b> <code>rustup install ${data.tag_name}</code>` +
+      `\n` +
       `\n` +
       `<b>Use the instant view or the following buttons to get more info:</b>`,
     {

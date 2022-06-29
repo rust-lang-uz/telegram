@@ -7,11 +7,14 @@ const composer = new Composer();
 
 export const message = async (data: Release) =>
   // make a message about the release date of the new release
-  `Latest version is <b><a href="${
+  `<b>Latest version is <a href="${
     (await hecker(data.tag_name, data.body)).url
-  }">${data.tag_name}</a></b> released at <code>${
+  }">${data.tag_name}</a> released at</b> <code>${
     new Date(data.published_at).toDateString()
-  }</code> by <a href="${data.author.html_url}">${data.author.login}</a>`;
+  }</code> by <a href="${data.author.html_url}">${data.author.login}</a>` +
+  `\n` +
+  `\n` +
+  `<b>In order to install latest update, execute</b> <code>rustup update</code> <b>on your terminal!</b>`;
 
 export const keyboard = (data: Release) =>
   new InlineKeyboard().url("More Information", data.html_url);
