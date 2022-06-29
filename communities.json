@@ -23,7 +23,7 @@
     "link": "https://rust-lang.ru"
   },
   {
-    "name": "pub ThisWeekInRust {}",
+    "name": "Handpicked News",
     "about": "Handpicked Rust updates, delivered to your telegram.",
     "telegram": "this_week_in_rust"
   },
