@@ -2,8 +2,10 @@ import { blue, Bot, serve, webhookCallback } from "./deps.ts";
 import "./utils/config.ts";
 import env from "./utils/config.ts";
 import delta from "./delta/mod.ts";
+import { Telegraph } from "https://deno.land/x/telegraph@v1.0.2/src/telegraph.ts";
 
 export const bot = new Bot(env["TOKEN"] || "");
+export const editor = new Telegraph({ accessToken: env["EDITOR"] });
 export const handle = webhookCallback(bot, "std/http");
 
 const initializer = async () => {
@@ -29,7 +31,7 @@ const webhook = async () => {
             return new Response("Nope, not working...");
           }
         default:
-          return new Response("What you're trying to post?");
+          return new Response("What you're trying post?");
       }
     }
 
