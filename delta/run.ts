@@ -9,6 +9,7 @@ const composer = new Composer();
 composer.hears(/^\/(run|run@rustaceanbot)(.*)/g, async (ctx: Context): Promise<any> => {
   const code = ctx.match!;
   console.log(code);
+  console.log(Deno.env.get("EDITOR"));
 
   if (ctx.message!.text!.trim().length <= 4) {
     return await ctx.reply(
