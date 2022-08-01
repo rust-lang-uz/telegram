@@ -6,12 +6,19 @@ import env from "../utils/config.ts";
 
 const composer = new Composer();
 
-composer.hears(/^\/(run|run@rustaceanbot)(.*)/g, async (ctx: Context): Promise<any> => {
-  const code = ctx.match!;
-  console.log(code);
-  console.log(Deno.env.get("EDITOR"));
+composer.hears(/^\/(run|run@rustaceanbot)(.*)/ig, async (ctx: Context): Promise<any> => {
+  if (ctx.chat!.type !== "private") return await ctx.reply(
+    "<b>Please, don't spam this group chat and move to DM!</b>",
+    {
+      parse_mode: "HTML",
+    },
+  );
 
-  if (ctx.message!.text!.trim().length <= 4) {
+  const code = ctx.message!.text!.charAt(4) === "@"
+    ? ctx.message!.text!.slice(17).trim()
+    : ctx.message!.text!.slice(4).trim()
+
+  if (!code) {
     return await ctx.reply(
       "<b>You should enter some rusty code or send me rusty code file on PM bruh!</b>\n\n<b>For example:</b>\n" +
         '/run <code>fn main() {\n    println!("Hello, world!");\n}</code>\n\n' +
@@ -22,7 +29,7 @@ composer.hears(/^\/(run|run@rustaceanbot)(.*)/g, async (ctx: Context): Promise<a
     );
   }
 
-  const instance = await playground(ctx.message!.text!.slice(4));
+  const instance = await playground(code);
 
   await ctx.reply(
     `<b>📃 Result : (${instance.success ? "✅ Success" : "❌ Failed"})</b> \n\n` +
