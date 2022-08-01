@@ -6,7 +6,7 @@ export const message =
   `<b>Hello fellow (rustacean|rustina|evangelist)!</b> \n` +
   `\n` +
   `This is a telegram bot created by a rustacean to help ` +
-  `people interact with various Rust API way more conveniently. `;
+  `people interact with various Rust API way more conveniently.`;
 
 export const keyboard = new InlineKeyboard().url(
   `Source Code`,

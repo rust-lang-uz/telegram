@@ -6,7 +6,10 @@ import env from "../utils/config.ts";
 
 const composer = new Composer();
 
-composer.hears(/^\/run(.*)/g, async (ctx: Context): Promise<any> => {
+composer.hears(/^\/(run|run@rustaceanbot)(.*)/g, async (ctx: Context): Promise<any> => {
+  const code = ctx.match!;
+  console.log(code);
+
   if (ctx.message!.text!.trim().length <= 4) {
     return await ctx.reply(
       "<b>You should enter some rusty code or send me rusty code file on PM bruh!</b>\n\n<b>For example:</b>\n" +
