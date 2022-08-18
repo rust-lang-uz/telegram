@@ -90,7 +90,7 @@ composer.callbackQuery(/^detail_(\d+)_(.*)$/, async (ctx: Context) => {
       },
     );
   } else {
-    await ctx.editMessageText(`<b>Ushbu distribut mavjud emas!</b>`, {
+    await ctx.editMessageText(`<b>The group or community doesn't exist!</b>`, {
       parse_mode: "HTML",
       reply_markup: new InlineKeyboard().text(`🔙 Back`, `group_${page}`),
     });
