@@ -1,0 +1,99 @@
+{
+  "tutorial": [
+    {
+      "name": "Rust 101",
+      "desc": "Just a basic, hands-on course",
+      "link": "https://www.ralfj.de/projects/rust-101/main.html"
+    },
+    {
+      "name": "Rustlings",
+      "desc": "Programming exercises in Rust",
+      "link": "https://github.com/rust-lang/rustlings"
+    },
+    {
+      "name": "Rust Cookbook",
+      "desc": "https://rust-lang-nursery.github.io/rust-cookbook/",
+      "link": "Learn Rust good practices with practical code samples"
+    },
+    {
+      "name": "CIS 198",
+      "desc": "Rust Programming, at University of Pennsylvania",
+      "link": "https://cis198-2016s.github.io/schedule/"
+    },
+    {
+      "name": "tourofrust",
+      "desc": "A step by step guide through the features of the Rust programming language",
+      "link": "https://tourofrust.com/"
+    }
+  ],
+  "podcasts": [
+    {
+      "name": "New Rustacean",
+      "desc": "For beginner Rustaceans",
+      "link": "https://newrustacean.com/"
+    },
+    {
+      "name": "Rusty Spike",
+      "desc": "Rust NEWS",
+      "link": "https://rusty-spike.blubrry.net/"
+    }
+  ],
+  "books": [
+    {
+      "name": "Rust Books",
+      "desc": "Collection of Rust books",
+      "link": "https://github.com/sger/RustBooks"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Rust Camp 2015",
+      "desc": "Keynote, by Aaron Turon",
+      "link": "https://youtu.be/jDQaIl_1Nfk"
+    },
+    {
+      "name": "Writing Crates",
+      "desc": "Writing Crates for Complete Beginners, Sunjay Varma",
+      "link": "https://youtu.be/ZtER1Wllbeo"
+    }
+  ],
+  "more": [
+    {
+      "name": "Rust Learnings",
+      "desc": "A list of awesome learning material",
+      "link": "https://github.com/ctjhoa/rust-learning"
+    },
+    {
+      "name": "Awesome Rust",
+      "desc": "Awesome stuff from the Rust ecosystem",
+      "link": "https://github.com/rust"
+    },
+    {
+      "name": "Rust Cheatsheet",
+      "desc": "Best way to get hands dirty with Rust.",
+      "link": "https://cheats.rs/"
+    },
+    {
+      "name": "Rust Error Fixer",
+      "desc": "Platform to clear your doubts",
+      "link": "https://users.rust-lang.org/"
+    }
+  ],
+  "even_more": [
+    {
+      "name": "Not-Yet-Awesome-Rust",
+      "desc": "Closing the gaps in the Rust ecosystem",
+      "link": "https://github.com/not-yet-awesome-rust/not-yet-awesome-rust"
+    },
+    {
+      "name": "Are we learning yet?",
+      "desc": "Helping make Rust ripe for Machine Learning",
+      "link": "https://www.arewelearningyet.com/"
+    },
+    {
+      "name": "Are we web yet?",
+      "desc": "Building the web-frameworks of tomorrow, with Rust!",
+      "link": "https://www.arewewebyet.org/"
+    }
+  ]
+}
