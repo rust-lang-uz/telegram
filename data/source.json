@@ -1,0 +1,109 @@
+{
+  "qo'llanma": [
+    {
+      "name": "Rust 101",
+      "desc": "Just a basic, hands-on course",
+      "link": "https://www.ralfj.de/projects/rust-101/main.html"
+    },
+    {
+      "name": "Rustlings",
+      "desc": "Programming exercises in Rust",
+      "link": "https://github.com/rust-lang/rustlings"
+    },
+    {
+      "name": "Rust Cookbook",
+      "desc": "Learn Rust good practices with practical code samples",
+      "link": "https://rust-lang-nursery.github.io/rust-cookbook/"
+    },
+    {
+      "name": "CIS 198",
+      "desc": "Rust Programming, at University of Pennsylvania",
+      "link": "https://cis198-2016s.github.io/schedule/"
+    },
+    {
+      "name": "tourofrust",
+      "desc": "A step by step guide through the features of the Rust programming language",
+      "link": "https://tourofrust.com/"
+    },
+    {
+      "name": "Rust Design Patterns",
+      "desc": "Learning how to implement design patterns on Rust programming language",
+      "link": "https://rust-unofficial.github.io/patterns/"
+    }
+  ],
+  "podkastlar": [
+    {
+      "name": "The Rustacean Station Podcast",
+      "desc": "Come journey with us into the weird, wonderful, and wily world of Rust",
+      "link": "https://rustacean-station.org/"
+    },
+    {
+      "name": "New Rustacean",
+      "desc": "For beginner Rustaceans",
+      "link": "https://newrustacean.com/"
+    },
+    {
+      "name": "Rusty Spike",
+      "desc": "Rust NEWS",
+      "link": "https://rusty-spike.blubrry.net/"
+    }
+  ],
+  "kitoblar": [
+    {
+      "name": "Rust Books",
+      "desc": "Collection of Rust books",
+      "link": "https://github.com/sger/RustBooks"
+    }
+  ],
+  "videolar": [
+    {
+      "name": "Rust Camp 2015",
+      "desc": "Keynote, by Aaron Turon",
+      "link": "https://youtu.be/jDQaIl_1Nfk"
+    },
+    {
+      "name": "Writing Crates",
+      "desc": "Writing Crates for Complete Beginners, Sunjay Varma",
+      "link": "https://youtu.be/ZtER1Wllbeo"
+    }
+  ],
+  "ko'proq": [
+    {
+      "name": "Rust Learnings",
+      "desc": "A list of awesome learning material",
+      "link": "https://github.com/ctjhoa/rust-learning"
+    },
+    {
+      "name": "Awesome Rust",
+      "desc": "Awesome stuff from the Rust ecosystem",
+      "link": "https://github.com/rust"
+    },
+    {
+      "name": "Rust Cheatsheet",
+      "desc": "Best way to get hands dirty with Rust.",
+      "link": "https://cheats.rs/"
+    },
+    {
+      "name": "Rust Error Fixer",
+      "desc": "Platform to clear your doubts",
+      "link": "https://users.rust-lang.org/"
+    }
+  ],
+  "yanada_ko'proq": [
+    {
+      "name": "Not-Yet-Awesome-Rust",
+      "desc": "Closing the gaps in the Rust ecosystem",
+      "link": "https://github.com/not-yet-awesome-rust/not-yet-awesome-rust"
+    },
+    {
+      "name": "Are we learning yet?",
+      "desc": "Helping make Rust ripe for Machine Learning",
+      "link": "https://www.arewelearningyet.com/"
+    },
+    {
+      "name": "Are we web yet?",
+      "desc": "Building the web-frameworks of tomorrow, with Rust!",
+      "link": "https://www.arewewebyet.org/"
+    }
+  ]
+}

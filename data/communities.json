@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Global Jamiyat",
+    "about": "Hamma narsa kamayadi, shuning uchunam dunyoni oksidlash uchun rust ishlating.",
+    "telegram": "@rustdevs",
+    "link": "https://rust-lang.org"
+  },
+  {
+    "name": "O'zbek Hamjamiyati",
+    "about": "O'zbek Rust dasturchilariga qaratilgan jamiyat",
+    "telegram": "@rustlanguz",
+    "link": "https://rust-lang.uz"
+  },
+  {
+    "name": "Ingliz Hamjamiyat",
+    "about": "Boshlang'ich rust dasturchilari uchun rust haqida qo'llanmalar yoki proyektlar ulashadigan kanal",
+    "telegram": "@rustlang_en"
+  },
+  {
+    "name": "Rus Hamjamiyat",
+    "about": "Rust — ruscha gaplashadigan hamjamiyat",
+    "telegram": "@rustlang_ru",
+    "link": "https://rust-lang.ru"
+  },
+  {
+    "name": "Saralangan yangiliklar",
+    "about": "Saralab olingan Rust yangiliklari telegramingizga yetkaziladi.",
+    "telegram": "@this_week_in_rust"
+  },
+  {
+    "name": "Rust Offtopic",
+    "about": "Mavzudan tashqarida gaplashiladigan guruh",
+    "telegram": "@rustlanguz_offtopic"
+  }
+]
