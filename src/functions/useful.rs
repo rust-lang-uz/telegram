@@ -9,10 +9,10 @@ use teloxide::{
     types::{InlineKeyboardMarkup, ParseMode},
 };
 
-static TEXT: &str = "<b>Rustga oid foydali materiallar:</b>\n\
-Agar o'zingizdan material qo'shmoqchi bo'lsangiz, bizni \
+static TEXT: &str = "<b>Materials related to Rust:</b>\n\
+If you would like to add more materials, please, check out our \
 <a href='https://github.com/rust-lang-uz/rustina/blob/main/data/source.json'>\
-source.json</a> ni yangilang!";
+source.json</a> and send PR!";
 
 pub async fn command(bot: &Bot, msg: &Message, resources: &Resources) -> ResponseResult<()> {
     let categories = resources.get_keys();
@@ -96,13 +96,13 @@ pub async fn callback_material_detail(
 }
 
 pub fn view_category_list(category: &str) -> String {
-    format!("<b>Siz hozirda {}{} kategoriyasi ichida turibsiz.</b>\nIltimos, keltirilgan materiallardan birini tanlang...", 
+    format!("<b>You're located at {}{} category.</b>\nPlease, choose one of provided materials above...", 
         &category[0..1].to_uppercase(), &category[1..].replace('_', " "))
 }
 
 pub fn view_material_detail(material: &Resource) -> String {
     format!(
-        "<b>{}</b>\n\n<i>{}</i>\n\n<b>Ushbu pastdagi tugmacha orqali lavha ga o'tib oling:</b>",
+        "<b>{}</b>\n\n<i>{}</i>\n\n<b>Go to website by pressing the button provided below:</b>",
         material.name, material.desc
     )
 }
@@ -140,7 +140,7 @@ pub fn keyboard_category_list(material: &[Resource], category: String) -> Inline
         keyboard.row();
     }
 
-    keyboard.text("🔙 Orqaga", "useful");
+    keyboard.text("🔙 Back", "useful");
 
     keyboard.get()
 }
@@ -148,9 +148,9 @@ pub fn keyboard_category_list(material: &[Resource], category: String) -> Inline
 pub fn keyboard_material_detail(resource: &Resource, category: String) -> InlineKeyboardMarkup {
     let mut keyboard = Keyboard::new();
 
-    keyboard.url("Web Sahifasi", &resource.link);
+    keyboard.url("Website", &resource.link);
     keyboard.row();
-    keyboard.text("🔙 Orqaga", &format!("category_{}", category));
+    keyboard.text("🔙 Back", &format!("category_{}", category));
 
     keyboard.get()
 }

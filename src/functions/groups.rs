@@ -9,7 +9,7 @@ use teloxide::{
     types::{InlineKeyboardMarkup, ParseMode},
 };
 
-static TEXT: &str = "<b>Telegramdagi Rust Hamjamiyatlari yoki Guruhlari:</b>\nAgar o'zingizni guruhingizni qo'shmoqchi bo'lsangiz, bizni <a href='https://github.com/rust-lang-uz/rustina/blob/main/data/communities.json'>community.json</a> ni yangilang!";
+static TEXT: &str = "<b>List of Rust Language communities on Telegram:</b>\nIf you want to add your own community to our list, update our <a href='https://github.com/rust-lang-uz/telegram/blob/main/communities.json'>community.json</a>";
 
 pub async fn command(bot: &Bot, msg: &Message, groups: &Groups) -> ResponseResult<()> {
     bot.send_message_tf(msg.chat.id, TEXT, msg)
@@ -70,7 +70,7 @@ pub fn view_detail(data: &Option<Group>) -> String {
                 d.name, d.about
             )
         }
-        None => "<b>Ushbu guruh mavjud emas!</b>".to_string(),
+        None => "<b>The following group doesn't seem like exist!</b>".to_string(),
     }
 }
 
@@ -90,11 +90,11 @@ pub fn keyboard_list(groups: &Groups, page: i32) -> InlineKeyboardMarkup {
     }
 
     if !groups.get_groups(page + 1, 5).is_empty() {
-        keyboard.text("Keyingi ➡️", &format!("group_{}", page + 1));
+        keyboard.text("Next ➡️", &format!("group_{}", page + 1));
     }
 
     if page > 1 {
-        keyboard.text("⬅️ Oldingi", &format!("group_{}", page - 1));
+        keyboard.text("🔙 Back", &format!("group_{}", page - 1));
     }
 
     keyboard.get()
@@ -112,9 +112,9 @@ pub fn keyboard_detail(page: i32, data: &Option<Group>) -> InlineKeyboardMarkup 
 
         keyboard.row();
 
-        keyboard.text("🔙 Orqaga", &format!("group_{}", page));
+        keyboard.text("🔙 Back", &format!("group_{}", page));
     } else {
-        keyboard.text("🔙 Orqaga", &format!("group_{}", page));
+        keyboard.text("🔙 Back", &format!("group_{}", page));
     }
 
     keyboard.get()

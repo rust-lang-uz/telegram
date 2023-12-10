@@ -20,14 +20,8 @@ pub enum Command {
     /// Starting point of the bot
     Start,
 
-    /// Rules of our chat
-    Rules,
-
     /// About the bot
     About,
-
-    /// Available groups
-    Group,
 
     /// Latest version
     Latest,
@@ -35,17 +29,14 @@ pub enum Command {
     /// Specific version
     Version,
 
-    /// Report offtopic
-    Off,
+    /// Available groups
+    Group,
+
+    /// Run rust code
+    // Run,
 
     /// Useful resources
     Useful,
-
-    /// Roadmap for newbies,
-    Roadmap,
-
-    /// Check for chatid
-    Check,
 }
 
 pub fn handler() -> UpdateHandler<Box<dyn std::error::Error + Send + Sync + 'static>> {
@@ -60,5 +51,4 @@ pub fn handler() -> UpdateHandler<Box<dyn std::error::Error + Send + Sync + 'sta
                 .filter_command::<Command>()
                 .endpoint(functions::commands),
         )
-        .branch(Update::filter_message().endpoint(functions::triggers))
 }

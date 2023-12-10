@@ -9,9 +9,9 @@ use teloxide::{
 };
 
 static TEXT: &str = r#"
-<b>Hurmatli foydalanuvchi!</b>
+<b>Hello fellow (rustacean|rustina|evangelist)!</b>
 
-Bizning botimiz aktiv tarzda shakllantirib boriladi. Buning ustida esa bir necha avtor va dasturchilar turadi, ushbu havolalar orqali bizning sinovchilarimizdan biriga aylaning va biz bilan botimiz, hamda guruhimiz ishlatish qulayligini oshiring.
+This is a telegram bot created by a rustacean to help people interact with various Rust APIs way more conveniently.
 "#;
 
 pub async fn command(bot: &Bot, msg: &Message) -> ResponseResult<()> {
@@ -29,5 +29,6 @@ pub async fn command(bot: &Bot, msg: &Message) -> ResponseResult<()> {
 
 pub fn keyboard() -> InlineKeyboardMarkup {
     let mut keyboard = Keyboard::new();
-    keyboard.url("Ochiq Havolalar", "https://github.com/rust-lang-uz/rustina")
+    keyboard.url("Source Code", "https://github.com/rust-lang-uz/telegram");
+    keyboard.url("Author", "https://github.com/orzklv")
 }

@@ -6,7 +6,7 @@ use teloxide::{
     types::{InlineKeyboardMarkup, ParseMode},
 };
 
-static TEXT: &str = "<b>Rust Dasturlash tili versiyalari:</b>";
+static TEXT: &str = "<b>List of Rust Programming Language Version:</b>";
 
 pub async fn command(bot: &Bot, github: GitHub, msg: &Message) -> ResponseResult<()> {
     let versions = github.get_list(1).await.unwrap();
@@ -72,10 +72,10 @@ pub async fn callback_detail(
 pub fn view_detail(release: &Release) -> String {
     format!(
         "<b><a href=\"{}\">{}</a></b>\n\n\
-        <b>Yaratildi:</b> {}\n\
-        <b>E'lon qilindi:</b> {}\n\
-        <b>O'rnatish:</b> <code>rustup install {}</code>\n\n\
-        <b>\"Instant view\" yoki quyidagi tugma orqali ko'proq ma'lumot oling:</b>",
+        <b>Created at:</b> {}\n\
+        <b>Published at:</b> {}\n\
+        <b>Install:</b> <code>rustup install {}</code>\n\n\
+        <b>Use \"Instant view\" or the following buttons to get more info:</b>",
         release.html_url,
         release.name.clone().unwrap(),
         release.created_at.unwrap().format("%d.%m.%Y"),
@@ -100,11 +100,11 @@ pub fn keyboard_list(
     }
 
     if page > 1 {
-        keyboard.text("⬅️ Oldingi", &format!("version_{}", page - 1));
+        keyboard.text("⬅️ Previous", &format!("version_{}", page - 1));
     }
 
     if next_page.is_some() && !next_page.unwrap().is_empty() {
-        keyboard.text("Keyingi ➡️", &format!("version_{}", page + 1));
+        keyboard.text("Next ➡️", &format!("version_{}", page + 1));
     }
 
     keyboard.get()
@@ -113,9 +113,9 @@ pub fn keyboard_list(
 pub fn keyboard_detail(page: u32, release: Release) -> InlineKeyboardMarkup {
     let mut keyboard = Keyboard::new();
 
-    keyboard.url("📝 GitHub da o'qish", release.html_url.as_str());
+    keyboard.url("📝 Read at GitHub", release.html_url.as_str());
     keyboard.row();
-    keyboard.text("🔙 Orqaga", &format!("version_{}", page));
+    keyboard.text("🔙 Back", &format!("version_{}", page));
 
     keyboard.get()
 }

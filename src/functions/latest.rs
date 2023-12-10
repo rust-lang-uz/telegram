@@ -19,10 +19,11 @@ pub async fn command(bot: &Bot, github: GitHub, msg: &Message) -> ResponseResult
 
 pub fn view(release: &Release) -> String {
     format!(
-        "<b>Hozirgi eng oxirgi versiya bu <a href=\"https://releases.rs/docs/{}\">\
-        {}</a> va ushbu reliz </b> <code>{}</code> da e'lon qilingan <a href=\"{}\">\
-        {}</a> tomonidan.\
+        "<b>Latest version is <a href=\"https://releases.rs/docs/{}\">\
+        {}</a> released at </b> <code>{}</code> by <a href=\"{}\">\
+        {}</a>.\
         \n\n\
+        <b>In order to install latest update, execute</b> <code>rustup update</code> <b>on your terminal!</b>
         ",
         release.tag_name,
         release.tag_name,
@@ -34,5 +35,5 @@ pub fn view(release: &Release) -> String {
 
 pub fn keyboard(release: &Release) -> InlineKeyboardMarkup {
     let mut keyboard = Keyboard::new();
-    keyboard.url("Ko'proq ma'lumotlar", release.html_url.as_str())
+    keyboard.url("More Information", release.html_url.as_str())
 }

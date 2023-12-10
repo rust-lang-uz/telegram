@@ -6,9 +6,9 @@ use teloxide::{
 };
 
 static TEXT: &str = r#"
-<b>Assalomu alaykum, hurmatli Rustacean!</b>
+<b>Hello fellow (rustacean|rustina|rust evangelist)!</b>
 
-Sizni ko'rib turganimdan bag'oyatda xursandman. Men O'zbek Rust jamiyati tomonidan yaratilgan bot hisoblanib, O'zbek Rust jamiyati foydalanuvchilari uchun foydali resurslarni yetkazish, saqlash va ularni saralash uchun xizmat qilaman.
+Glad that you decided to give a try this bot. This bot helps you to do some rusty things without leaving telegram social messenger and interact with various APIs way more conveniently.
 "#;
 
 pub async fn command(bot: &Bot, msg: &Message) -> ResponseResult<()> {
@@ -22,6 +22,9 @@ pub async fn command(bot: &Bot, msg: &Message) -> ResponseResult<()> {
 
 pub fn keyboard() -> InlineKeyboardMarkup {
     let mut keyboard = Keyboard::new();
-    keyboard.url("Jamiyat", "https://t.me/rustlanguz");
-    keyboard.url("Web Sahifa", "https://rust-lang.uz")
+    keyboard.url("Rust", "https://rust-lang.org");
+    keyboard.url("GitHub", "https://github.com/rust-lang");
+    keyboard.row();
+    keyboard.url("Our Team", "https://github.com/rust-lang-uz");
+    keyboard.url("Rustacean", "https://rustacean.net")
 }
