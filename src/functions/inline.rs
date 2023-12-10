@@ -15,7 +15,7 @@ pub async fn inline(
                 q.id,
                 vec![InlineQueryResultArticle::new(
                     "101",
-                    "Qidirishni boshlang!",
+                    "Start searching!",
                     InputMessageContent::Text(
                         InputMessageContentText::new(NO_INPUT)
                             .parse_mode(ParseMode::Html)
@@ -44,10 +44,10 @@ pub async fn inline(
                 q.id,
                 vec![InlineQueryResultArticle::new(
                     "404",
-                    "Xatolik yuz berdi!",
+                    "Couldn't find!",
                     InputMessageContent::Text(
                         InputMessageContentText::new(
-                            format!("<b>{} ga oid natija mavjud emas!</b>\nIltimos, boshqattan ushbu qidirmoqchi bo'lgan paketingiz yozib qidirib ko'ring!", 
+                            format!("<b>There are no results related to {}!</b>\nPlease, Try to search with other names or parameters!", 
                             q.query.clone())
                         )
                             .parse_mode(ParseMode::Html)
