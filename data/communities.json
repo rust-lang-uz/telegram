@@ -1,35 +1,35 @@
 [
   {
-    "name": "Global Jamiyat",
-    "about": "Hamma narsa kamayadi, shuning uchunam dunyoni oksidlash uchun rust ishlating.",
+    "name": "Global Community",
+    "about": "Everything else is reducing, so use rust to oxidize the world.",
     "telegram": "@rustdevs",
     "link": "https://rust-lang.org"
   },
   {
-    "name": "O'zbek Hamjamiyati",
+    "name": "Uzbek Community",
     "about": "O'zbek Rust dasturchilariga qaratilgan jamiyat",
     "telegram": "@rustlanguz",
     "link": "https://rust-lang.uz"
   },
   {
-    "name": "Ingliz Hamjamiyat",
-    "about": "Boshlang'ich rust dasturchilari uchun rust haqida qo'llanmalar yoki proyektlar ulashadigan kanal",
+    "name": "English Community",
+    "about": "A channel to share rust tutorials and projects for beginners",
     "telegram": "@rustlang_en"
   },
   {
-    "name": "Rus Hamjamiyat",
-    "about": "Rust — ruscha gaplashadigan hamjamiyat",
+    "name": "Russian Community",
+    "about": "Rust — русскоговорящее сообщество",
     "telegram": "@rustlang_ru",
     "link": "https://rust-lang.ru"
   },
   {
-    "name": "Saralangan yangiliklar",
-    "about": "Saralab olingan Rust yangiliklari telegramingizga yetkaziladi.",
-    "telegram": "@this_week_in_rust"
+    "name": "Handpicked News",
+    "about": "Handpicked Rust updates, delivered to your telegram.",
+    "telegram": "this_week_in_rust"
   },
   {
     "name": "Rust Offtopic",
-    "about": "Mavzudan tashqarida gaplashiladigan guruh",
-    "telegram": "@rustlanguz_offtopic"
+    "about": "The place where you can share anything (probably)...",
+    "telegram": "@offtopica"
   }
 ]

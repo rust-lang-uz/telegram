@@ -9,11 +9,11 @@ use crate::utils::{
     message::{delete_timer, Rustina},
 };
 
-static TEXT: &str = "⚠️ <b>Bu komanda faqat shaxsiy chat uchun!</b>";
+static TEXT: &str = "⚠️ <b>This command can be used only in DMs!</b>";
 
 pub fn keyboard() -> InlineKeyboardMarkup {
     let mut keyboard: Keyboard = Keyboard::new();
-    keyboard.url("Shaxsiy Chat", "https://t.me/rustinabot")
+    keyboard.url("Direct Message", "https://t.me/rustinabot")
 }
 
 pub async fn is_private(bot: &Bot, msg: &Message) -> ResponseResult<bool> {
