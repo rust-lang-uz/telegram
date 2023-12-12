@@ -11,7 +11,7 @@ use teloxide::{
 
 static TEXT: &str = "<b>Materials related to Rust:</b>\n\
 If you would like to add more materials, please, check out our \
-<a href='https://github.com/rust-lang-uz/rustina/blob/main/data/source.json'>\
+<a href='https://github.com/rust-lang-uz/telegram/blob/main/data/source.json'>\
 source.json</a> and send PR!";
 
 pub async fn command(bot: &Bot, msg: &Message, resources: &Resources) -> ResponseResult<()> {

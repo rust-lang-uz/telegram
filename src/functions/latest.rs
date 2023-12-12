@@ -20,7 +20,7 @@ pub async fn command(bot: &Bot, github: GitHub, msg: &Message) -> ResponseResult
 pub fn view(release: &Release) -> String {
     format!(
         "<b>Latest version is <a href=\"https://releases.rs/docs/{}\">\
-        {}</a> released at </b> <code>{}</code> by <a href=\"{}\">\
+        {}</a> released at </b> <code>{}</code> <b>by</b> <a href=\"{}\">\
         {}</a>.\
         \n\n\
         <b>In order to install latest update, execute</b> <code>rustup update</code> <b>on your terminal!</b>

@@ -1,5 +1,5 @@
 {
-  "qo'llanma": [
+  "guides": [
     {
       "name": "Rust 101",
       "desc": "Just a basic, hands-on course",
@@ -31,7 +31,7 @@
       "link": "https://rust-unofficial.github.io/patterns/"
     }
   ],
-  "podkastlar": [
+  "podcasts": [
     {
       "name": "The Rustacean Station Podcast",
       "desc": "Come journey with us into the weird, wonderful, and wily world of Rust",
@@ -48,14 +48,14 @@
       "link": "https://rusty-spike.blubrry.net/"
     }
   ],
-  "kitoblar": [
+  "books": [
     {
       "name": "Rust Books",
       "desc": "Collection of Rust books",
       "link": "https://github.com/sger/RustBooks"
     }
   ],
-  "videolar": [
+  "videos": [
     {
       "name": "Rust Camp 2015",
       "desc": "Keynote, by Aaron Turon",
@@ -67,7 +67,7 @@
       "link": "https://youtu.be/ZtER1Wllbeo"
     }
   ],
-  "ko'proq": [
+  "more": [
     {
       "name": "Rust Learnings",
       "desc": "A list of awesome learning material",
@@ -89,7 +89,7 @@
       "link": "https://users.rust-lang.org/"
     }
   ],
-  "yanada_ko'proq": [
+  "even_more": [
     {
       "name": "Not-Yet-Awesome-Rust",
       "desc": "Closing the gaps in the Rust ecosystem",

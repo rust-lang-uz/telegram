@@ -9,7 +9,6 @@ static TEXT: &[(&str, &str)] = &[
     ("version", "get information about specific version"),
     ("group", "rust communities"),
     ("run &lt;code&gt;", "run code and show stout & sterr"),
-    ("roadmap", "roadmap for newbies"),
     ("useful", "useful resources"),
 ];
 

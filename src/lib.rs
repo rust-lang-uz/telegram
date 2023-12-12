@@ -33,7 +33,7 @@ pub enum Command {
     Group,
 
     /// Run rust code
-    // Run,
+    Run,
 
     /// Useful resources
     Useful,

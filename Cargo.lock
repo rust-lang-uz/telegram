@@ -1266,22 +1266,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "rustina"
-version = "0.1.0"
-dependencies = [
- "crates_io_api",
- "log",
- "octocrab",
- "pretty_env_logger",
- "serde",
- "serde_json",
- "teloxide",
- "tokio",
- "url",
- "uuid",
-]
-
-[[package]]
 name = "rustix"
 version = "0.38.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1622,6 +1606,23 @@ name = "takecell"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "20f34339676cdcab560c9a82300c4c2581f68b9369aedf0fae86f2ff9565ff3e"
+
+[[package]]
+name = "telegram"
+version = "0.1.0"
+dependencies = [
+ "crates_io_api",
+ "log",
+ "octocrab",
+ "pretty_env_logger",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "teloxide",
+ "tokio",
+ "url",
+ "uuid",
+]
 
 [[package]]
 name = "teloxide"

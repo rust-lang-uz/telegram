@@ -1,9 +1,9 @@
 use crates_io_api::AsyncClient;
-use rustina::{
+use std::error::Error;
+use telegram::{
     handler,
     utils::{cargo_like_log, github::GitHub, groups::Groups, resources::Resources},
 };
-use std::error::Error;
 use teloxide::{prelude::*, update_listeners::webhooks};
 
 #[tokio::main]

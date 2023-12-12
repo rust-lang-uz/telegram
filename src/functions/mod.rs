@@ -3,6 +3,7 @@ pub mod groups;
 pub mod help;
 pub mod inline;
 pub mod latest;
+pub mod run;
 pub mod start;
 pub mod useful;
 pub mod version;
@@ -28,6 +29,7 @@ pub async fn commands(
         Command::Help => crate::functions::help::command(&bot, &msg, &cmd).await, // partially done
         Command::About => crate::functions::about::command(&bot, &msg).await, // done
         Command::Group => crate::functions::groups::command(&bot, &msg, &groups).await, // done
+        Command::Run => crate::functions::run::command(&bot, &msg).await,     // done
         Command::Latest => crate::functions::latest::command(&bot, github, &msg).await, // done
         Command::Version => crate::functions::version::command(&bot, github, &msg).await, // done
         Command::Useful => crate::functions::useful::command(&bot, &msg, &resources).await, // done

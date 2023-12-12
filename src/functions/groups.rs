@@ -9,7 +9,7 @@ use teloxide::{
     types::{InlineKeyboardMarkup, ParseMode},
 };
 
-static TEXT: &str = "<b>List of Rust Language communities on Telegram:</b>\nIf you want to add your own community to our list, update our <a href='https://github.com/rust-lang-uz/telegram/blob/main/communities.json'>community.json</a>";
+static TEXT: &str = "<b>List of Rust Language communities on Telegram:</b>\nIf you want to add your own community to our list, update our <a href='https://github.com/rust-lang-uz/telegram/blob/main/data/communities.json'>community.json</a>";
 
 pub async fn command(bot: &Bot, msg: &Message, groups: &Groups) -> ResponseResult<()> {
     bot.send_message_tf(msg.chat.id, TEXT, msg)

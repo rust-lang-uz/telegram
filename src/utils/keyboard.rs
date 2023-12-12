@@ -1,4 +1,6 @@
-use teloxide::types::{InlineKeyboardButton, InlineKeyboardMarkup};
+use std::str::FromStr;
+
+use teloxide::types::{InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo};
 use url::Url;
 
 #[derive(Clone)]
@@ -45,6 +47,20 @@ impl Keyboard {
         self.keyboard.last_mut().unwrap().push(
             InlineKeyboardButton::switch_inline_query_current_chat(text, query),
         );
+
+        self.get()
+    }
+
+    pub fn web_app(&mut self, text: &str, link: &str) -> InlineKeyboardMarkup {
+        self.keyboard
+            .last_mut()
+            .unwrap()
+            .push(InlineKeyboardButton::web_app(
+                text,
+                WebAppInfo {
+                    url: Url::from_str(link).unwrap(),
+                },
+            ));
 
         self.get()
     }

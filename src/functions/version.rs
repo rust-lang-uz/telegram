@@ -6,7 +6,7 @@ use teloxide::{
     types::{InlineKeyboardMarkup, ParseMode},
 };
 
-static TEXT: &str = "<b>List of Rust Programming Language Version:</b>";
+static TEXT: &str = "<b>List of rust programming language versions:</b>";
 
 pub async fn command(bot: &Bot, github: GitHub, msg: &Message) -> ResponseResult<()> {
     let versions = github.get_list(1).await.unwrap();
