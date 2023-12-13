@@ -1,5 +1,5 @@
 {
-  "tutorial": [
+  "guides": [
     {
       "name": "Rust 101",
       "desc": "Just a basic, hands-on course",
@@ -12,8 +12,8 @@
     },
     {
       "name": "Rust Cookbook",
-      "desc": "https://rust-lang-nursery.github.io/rust-cookbook/",
-      "link": "Learn Rust good practices with practical code samples"
+      "desc": "Learn Rust good practices with practical code samples",
+      "link": "https://rust-lang-nursery.github.io/rust-cookbook/"
     },
     {
       "name": "CIS 198",
@@ -24,9 +24,19 @@
       "name": "tourofrust",
       "desc": "A step by step guide through the features of the Rust programming language",
       "link": "https://tourofrust.com/"
+    },
+    {
+      "name": "Rust Design Patterns",
+      "desc": "Learning how to implement design patterns on Rust programming language",
+      "link": "https://rust-unofficial.github.io/patterns/"
     }
   ],
   "podcasts": [
+    {
+      "name": "The Rustacean Station Podcast",
+      "desc": "Come journey with us into the weird, wonderful, and wily world of Rust",
+      "link": "https://rustacean-station.org/"
+    },
     {
       "name": "New Rustacean",
       "desc": "For beginner Rustaceans",

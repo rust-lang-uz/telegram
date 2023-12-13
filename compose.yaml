@@ -1,0 +1,10 @@
+services:
+  server:
+    container_name: rustacean
+    restart: always
+    build:
+      context: .
+      target: final
+    ports:
+      - 8444:8444
+    env_file: .env
