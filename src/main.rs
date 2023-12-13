@@ -1,6 +1,6 @@
 use crates_io_api::AsyncClient;
 use std::error::Error;
-use telegram::{
+use rustacean::{
     handler,
     utils::{cargo_like_log, github::GitHub, groups::Groups, resources::Resources},
 };
