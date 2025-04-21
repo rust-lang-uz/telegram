@@ -12,7 +12,7 @@ impl GitHub {
 
         let client = client.add_header(
             "User-Agent".parse().unwrap(),
-            "Rustina Assistant (support@floss.uz)".to_string(),
+            "Rustacean Assistant (support@floss.uz)".to_string(),
         );
 
         match token {

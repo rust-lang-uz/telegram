@@ -4,7 +4,7 @@ use teloxide::{payloads::SendMessageSetters, prelude::*, types::*};
 
 static TEXT: &str = "<b>Rustga oid foydali materiallar:</b>\n\
 Agar o'zingizdan material qo'shmoqchi bo'lsangiz, bizni \
-<a href='https://github.com/rust-lang-uz/rustina/blob/main/data/source.json'>\
+<a href='https://github.com/rust-lang-uz/telegram/blob/main/data/source.json'>\
 source.json</a> ni yangilang!";
 
 pub async fn command(bot: &Bot, msg: &Message, resources: &Resources) -> ResponseResult<()> {

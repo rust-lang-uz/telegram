@@ -292,7 +292,7 @@ pub fn view_detail(from: (&str, &str), topic: String) -> String {
         {} guruhimizda ushbu mavzuga oid narsalar haqida suhbatlashish ruxsat etiladi. \
         Boshqalarga halaqit qilmayliga 😉\
         \n\n\
-        <b>Hurmat ila, Rustina</b>",
+        <b>Hurmat ila, Rustacean</b>",
         from.0,
         from.1,
         topic,
