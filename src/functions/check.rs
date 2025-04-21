@@ -18,7 +18,5 @@ pub fn view(msg: &Message) -> String {
         message.push_str(&format!("\n<b>Thread ID:</b> {}", msg.thread_id.unwrap()))
     }
 
-    println!("Message: {:?}", message);
-
     message
 }

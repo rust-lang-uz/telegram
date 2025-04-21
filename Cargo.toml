@@ -3,7 +3,7 @@ name = "bot"
 description = "Telegram bot manager for Uzbek Rust community"
 version = "0.1.0"
 edition = "2021"
-license = "Apache-2.0"
+license = "MIT OR Apache-2.0"
 homepage = "https://github.com/rust-lang-uz/telegram"
 repository = "https://github.com/rust-lang-uz/telegram"
 

@@ -45,7 +45,7 @@ pub async fn callback_list(
                 })
                 .await?;
         } else if let Some(id) = q.inline_message_id.clone() {
-            bot.edit_message_text_inline(id, "Oopsie, something went wrong...")
+            bot.edit_message_text_inline(id, "Ebe hay, nimadir bo'ldi...")
                 .await?;
         }
     }
@@ -69,7 +69,7 @@ pub async fn callback_detail(bot: &Bot, q: &CallbackQuery, args: &[&str]) -> Res
                 .reply_markup(keyboard_detail(args[0].parse().unwrap_or(1), &find))
                 .await?;
         } else if let Some(id) = q.inline_message_id.clone() {
-            bot.edit_message_text_inline(id, "Oopsie, something went wrong...")
+            bot.edit_message_text_inline(id, "Ebe hay, nimadir bo'ldi...")
                 .await?;
         }
     }

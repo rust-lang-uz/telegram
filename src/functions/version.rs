@@ -43,7 +43,7 @@ pub async fn callback_list(
                 .reply_markup(keyboard_list(page, versions, Some(next_page)))
                 .await?;
         } else if let Some(id) = q.inline_message_id.clone() {
-            bot.edit_message_text_inline(id, "Oopsie, something went wrong...")
+            bot.edit_message_text_inline(id, "Ebe hay, nimadir bo'ldi...")
                 .await?;
         }
     }
@@ -72,7 +72,7 @@ pub async fn callback_detail(
                 .reply_markup(keyboard_detail(page, version))
                 .await?;
         } else if let Some(id) = q.inline_message_id.clone() {
-            bot.edit_message_text_inline(id, "Oopsie, something went wrong...")
+            bot.edit_message_text_inline(id, "Ebe hay, nimadir bo'ldi...")
                 .await?;
         }
     }
