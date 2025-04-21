@@ -17,10 +17,7 @@ impl GitHub {
 
         match token {
             Some(t) => Self {
-                client: client
-                    .personal_token(t.trim())
-                    .build()
-                    .unwrap(),
+                client: client.personal_token(t.trim()).build().unwrap(),
             },
             None => Self {
                 client: client.build().unwrap(),

@@ -27,5 +27,10 @@ pub async fn command(bot: &Bot, msg: &Message) -> ResponseResult<()> {
 
 pub fn keyboard() -> InlineKeyboardMarkup {
     let mut keyboard = Keyboard::new();
-    keyboard.url("Ochiq Havolalar", "https://github.com/rust-lang-uz/telegram").unwrap()
+    keyboard
+        .url(
+            "Ochiq Havolalar",
+            "https://github.com/rust-lang-uz/telegram",
+        )
+        .unwrap()
 }

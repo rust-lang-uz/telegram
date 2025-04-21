@@ -37,7 +37,14 @@ pub async fn command(bot: &Bot, msg: &Message) -> ResponseResult<()> {
 
 pub fn keyboard() -> InlineKeyboardMarkup {
     let mut keyboard = Keyboard::new();
-    keyboard.url("Guruhga qaytish", "https://t.me/rustlanguz").unwrap();
+    keyboard
+        .url("Guruhga qaytish", "https://t.me/rustlanguz")
+        .unwrap();
     keyboard.row();
-    keyboard.url("Rad Etilgan Qoidalar", "https://github.com/rust-lang-uz/.github/blob/main/RULES.md").unwrap()
+    keyboard
+        .url(
+            "Rad Etilgan Qoidalar",
+            "https://github.com/rust-lang-uz/.github/blob/main/RULES.md",
+        )
+        .unwrap()
 }
