@@ -1,3 +1,4 @@
+use crate::hooks;
 use crate::utils::resources::{Resource, Resources};
 use orzklv::telegram::{keyboard::Keyboard, topic::Topics};
 use teloxide::{payloads::SendMessageSetters, prelude::*, types::*};
@@ -8,6 +9,10 @@ Agar o'zingizdan material qo'shmoqchi bo'lsangiz, bizni \
 source.json</a> ni yangilang!";
 
 pub async fn command(bot: &Bot, msg: &Message, resources: &Resources) -> ResponseResult<()> {
+    if !hooks::is_private(bot, msg).await.unwrap() {
+        return Ok(());
+    }
+
     let categories = resources.get_keys();
 
     bot.send_message_tf(msg.chat.id, TEXT, msg)
