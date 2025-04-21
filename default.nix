@@ -6,7 +6,7 @@
   manifest = (pkgs.lib.importTOML ./Cargo.toml).package;
 in
   pkgs.rustPlatform.buildRustPackage {
-    pname = "bot";
+    pname = manifest.name;
     version = manifest.version;
     cargoLock.lockFile = ./Cargo.lock;
     src = pkgs.lib.cleanSource ./.;
@@ -43,24 +43,9 @@ in
 
     meta = with lib; {
       homepage = manifest.homepage;
-      description = "Telegram bot manager for Uzbek Rust community";
+      description = manifest.description;
       license = with lib.licenses; [asl20];
-
       platforms = with platforms; linux ++ darwin;
-
-      maintainers = [
-        {
-          name = "Sokhibjon Orzikulov";
-          email = "sakhib@orzklv.uz";
-          handle = "orzklv";
-          github = "orzklv";
-          githubId = 54666588;
-          keys = [
-            {
-              fingerprint = "00D2 7BC6 8707 0683 FBB9  137C 3C35 D3AF 0DA1 D6A8";
-            }
-          ];
-        }
-      ];
+      maintainers = [lib.maintainers.orzklv];
     };
   }
