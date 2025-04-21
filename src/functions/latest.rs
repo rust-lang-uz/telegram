@@ -27,8 +27,8 @@ pub fn view(release: &Release) -> String {
         release.tag_name,
         release.tag_name,
         release.published_at.unwrap().date_naive(),
-        release.author.html_url,
-        release.author.login,
+        release.author.clone().unwrap().html_url,
+        release.author.clone().unwrap().login,
     )
 }
 

@@ -20,7 +20,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let resources = Resources::new();
     let mut config = Config::default();
     let crates_client = AsyncClient::new(
-        "Rustina Assistant (rust@maid.uz)",
+        "Rustacean Assistant (support@floss.uz)",
         std::time::Duration::from_millis(100),
     )
     .unwrap();

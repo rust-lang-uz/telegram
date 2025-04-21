@@ -12,13 +12,13 @@ impl GitHub {
 
         let client = client.add_header(
             "User-Agent".parse().unwrap(),
-            "Rustina Assistant (rust@maid.uz)".to_string(),
+            "Rustina Assistant (support@floss.uz)".to_string(),
         );
 
         match token {
             Some(t) => Self {
                 client: client
-                    .add_header("Authorization".parse().unwrap(), t)
+                    .personal_token(t.trim())
                     .build()
                     .unwrap(),
             },

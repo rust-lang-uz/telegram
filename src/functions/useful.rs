@@ -60,7 +60,7 @@ pub async fn callback_list(
 pub async fn callback_category_list(
     bot: &Bot,
     q: &CallbackQuery,
-    args: &Vec<&str>,
+    args: &[&str],
     resources: &Resources,
 ) -> ResponseResult<()> {
     let find = resources.get_materials(args.join("_").as_str()).unwrap();

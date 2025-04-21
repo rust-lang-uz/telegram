@@ -3,6 +3,8 @@ result
 
 # Local envs
 .env
+.gh
+.telegram
 
 # Added by cargo
 /target

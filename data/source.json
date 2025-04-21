@@ -29,23 +29,43 @@
       "name": "Rust Design Patterns",
       "desc": "Learning how to implement design patterns on Rust programming language",
       "link": "https://rust-unofficial.github.io/patterns/"
+    },
+    {
+      "name": "LearnRust",
+      "desc": "Roadmap From Beginner to Advanced Level",
+      "link": "https://github.com/ImplFerris/LearnRust"
     }
   ],
   "podkastlar": [
     {
       "name": "The Rustacean Station Podcast",
-      "desc": "Come journey with us into the weird, wonderful, and wily world of Rust",
+      "desc": "Come journey with us into the weird, wonderful, and wily world of Rust.",
       "link": "https://rustacean-station.org/"
     },
     {
       "name": "New Rustacean",
-      "desc": "For beginner Rustaceans",
+      "desc": "For beginner Rustaceans.",
       "link": "https://newrustacean.com/"
     },
     {
-      "name": "Rusty Spike",
-      "desc": "Rust NEWS",
-      "link": "https://rusty-spike.blubrry.net/"
+      "name": "Self-Directed Research Podcast",
+      "desc": "This is the Self Directed Research Podcast, where our hosts James and Amos share a little bit about the topics they’ve been obsessing about lately.",
+      "link": "https://newrustacean.com/"
+    },
+    {
+      "name": "Rusty in Production",
+      "desc": "Rust in Production brings production stories to light.",
+      "link": "https://corrode.dev/podcast/"
+    },
+    {
+      "name": "RustShip",
+      "desc": "Marco Ieni interviews other Rust developers to learn from their experience.",
+      "link": "https://www.youtube.com/playlist?list=PLohFzyfZyjxHnChrXUadQ63FbsL7sCi0h"
+    },
+    {
+      "name": "Compose",
+      "desc": "Compose is an interview podcast for software developers using the Rust programming language to build a better planet.",
+      "link": "https://www.youtube.com/playlist?list=PLohFzyfZyjxHnChrXUadQ63FbsL7sCi0h"
     }
   ],
   "kitoblar": [
@@ -76,7 +96,7 @@
     {
       "name": "Awesome Rust",
       "desc": "Awesome stuff from the Rust ecosystem",
-      "link": "https://github.com/rust"
+      "link": "https://github.com/rust-unofficial/awesome-rust"
     },
     {
       "name": "Rust Cheatsheet",
@@ -87,6 +107,11 @@
       "name": "Rust Error Fixer",
       "desc": "Platform to clear your doubts",
       "link": "https://users.rust-lang.org/"
+    },
+    {
+      "name": "Rust Exercism",
+      "desc": "Learn Rust by writing small programs with Exercism",
+      "link": "https://exercism.org/tracks/rust/"
     }
   ],
   "yanada_ko'proq": [
@@ -103,6 +128,16 @@
     {
       "name": "Are we web yet?",
       "desc": "Building the web-frameworks of tomorrow, with Rust!",
+      "link": "https://www.arewewebyet.org/"
+    },
+    {
+      "name": "Are we GUI yet?",
+      "desc": "The state of building user interfaces in Rust.",
+      "link": "https://www.arewewebyet.org/"
+    },
+    {
+      "name": "Days since last RIIR Minecraft server",
+      "desc": "Days since the last release of a Minecraft server software written in Rust.",
       "link": "https://www.arewewebyet.org/"
     }
   ]

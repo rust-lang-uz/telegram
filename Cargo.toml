@@ -9,22 +9,22 @@ repository = "https://github.com/rust-lang-uz/telegram"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-teloxide = { version = "0.13", features = [
+teloxide = { version = "0.15", features = [
   "macros",
   "webhooks",
   "webhooks-axum",
 ] }
 log = "0.4"
 pretty_env_logger = "0.5.0"
-tokio = { version = "1.8", features = ["rt-multi-thread", "macros"] }
-url = "2.4.1"
-crates_io_api = "0.8.2"
-uuid = { version = "1.5.0", features = ["v4"] }
-serde_json = "1.0.108"
-serde = { version = "1.0.192", features = ["derive"] }
-octocrab = { version = "0.32.0" }
-clap = { version = "4.5.23", features = ["derive"] }
-orzklv = { version = "0.1.8", features = ["full"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+url = "2"
+crates_io_api = "0.11"
+uuid = { version = "1", features = ["v4"] }
+serde_json = "1"
+serde = { version = "1", features = ["derive"] }
+octocrab = { version = "0.44" }
+clap = { version = "4", features = ["derive"] }
+orzklv = { version = "0.1.9", features = ["full"] }
 
 [profile.release]
 strip = true

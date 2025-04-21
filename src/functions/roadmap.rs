@@ -13,7 +13,7 @@ static LINKS: &[(&str, &str)] = &[
         "Offitsial Dokumentatsiya",
         "https://doc.rust-lang.org/book/",
     ),
-    ("O'zbek tilidagi varianti", "https://book.rust-lang.uz"),
+    ("O'zbek tilidagi varianti", "https://doc.rust-lang.uz/book/"),
     (
         "Rust by Example",
         "https://doc.rust-lang.org/rust-by-example/",

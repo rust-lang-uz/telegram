@@ -314,7 +314,7 @@ where
 
     for (index, topic) in list.iter().enumerate() {
         keyboard.text(
-            topic,
+            &topic.capitalize(),
             &format!(
                 "warn_{}_{}_{}_{}_{}",
                 owner.0, topic, replied.0, name, replied_message
