@@ -8,3 +8,6 @@ result
 
 # Added by cargo
 /target
+
+# Direnv
+.direnv
