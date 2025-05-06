@@ -6,6 +6,7 @@ use teloxide::{prelude::*, types::ParseMode};
 static TEXT: &[(&str, &str)] = &[
     ("help", "ushbu xabarni qayta ko'rsatish"),
     ("rules", "qoidalarni aks ettirish"),
+    ("check", "chaqirilgan joydan parametrlarni ko'rish"),
     ("about", "ushbu botimizning rivojlantirish qismi"),
     ("group", "rust ga oid guruh va hamjamiyatlar"),
     ("roadmap", "boshlang'ich o'rganuvchilar uchun"),

@@ -15,9 +15,12 @@ static TEXT_FAIL: &str = "Ha-ha... yaxshi urinish!";
 static TEXT_NON_REPLY: &str = "↪ Reply bilan ko'rsatingchi habarni!";
 static NON_COMMUNITY: &str = "Ebe hay, biz O'zbek Rust hamjamiyati guruhida emasga o'xshaymiz...";
 
+static FLOSS_CHAT: ChatId = ChatId(-1001303954475);
+static RUST_CHAT: ChatId = ChatId(-1001518595284);
+
 pub async fn command(bot: &Bot, msg: &Message, me: &Me, topics: &Topics) -> ResponseResult<()> {
-    // if chat is not rust uzbekistan, delete
-    if msg.chat.id != ChatId(-1001518595284) {
+    // if chat is not community, delete
+    if msg.chat.id != RUST_CHAT {
         return {
             bot.send_message_tf(msg.chat.id, NON_COMMUNITY, msg).await?;
             Ok(())
@@ -156,7 +159,7 @@ pub async fn callback(
         None => {
             return {
                 bot.send_message(
-                    ChatId(-1001518595284),
+                    RUST_CHAT,
                     "Qaysidir thread da xabarni tushuna olmadim, akalar meni loglarim qarab ko'rasizlarmi?",
                 )
                 .message_thread_id(ThreadId(MessageId(255895)))
@@ -242,9 +245,15 @@ pub async fn callback(
                 }
             };
 
-            let forward = bot.forward_message(message.chat.id, message.chat.id, replied_message);
+            // select where to forward message
+            let forward = match c {
+                0 => bot.forward_message(FLOSS_CHAT.to_string(), message.chat.id, replied_message),
+                _ => bot.forward_message(message.chat.id, message.chat.id, replied_message),
+            };
+
+            // if it has topic, appoint it
             match parsed_topic {
-                1 => {
+                0..1 => {
                     forward.await?;
                 }
                 _ => {
@@ -292,7 +301,7 @@ pub fn view_detail(from: (&str, &str), topic: String) -> String {
         {} guruhimizda ushbu mavzuga oid narsalar haqida suhbatlashish ruxsat etiladi. \
         Boshqalarga halaqit qilmayliga 😉\
         \n\n\
-        <b>Hurmat ila, Rustacean</b>",
+        <b>Hurmat ila, Rustacean Menejer</b>",
         from.0,
         from.1,
         topic,
@@ -314,7 +323,7 @@ where
 
     for (index, topic) in list.iter().enumerate() {
         keyboard.text(
-            &topic.capitalize(),
+            topic,
             &format!(
                 "warn_{}_{}_{}_{}_{}",
                 owner.0, topic, replied.0, name, replied_message
