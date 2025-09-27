@@ -178,7 +178,7 @@ in {
         telegram = mkOption {
           type = with types; nullOr path;
           default = null;
-          description = lib.mdDoc ''
+          description = ''
             Path to telegram bot token of Rustina manager.
           '';
         };
@@ -186,7 +186,7 @@ in {
         github = mkOption {
           type = with types; nullOr path;
           default = null;
-          description = lib.mdDoc ''
+          description = ''
             Path to github token for Rustina manager.
           '';
         };
@@ -207,7 +207,7 @@ in {
       dataDir = mkOption {
         type = types.str;
         default = "/var/lib/rustina/bot";
-        description = lib.mdDoc ''
+        description = ''
           The path where Rustina Bot keeps its config, data, and logs.
         '';
       };
