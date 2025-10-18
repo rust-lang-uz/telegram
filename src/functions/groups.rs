@@ -120,7 +120,10 @@ pub fn keyboard_detail(page: i32, data: &Option<Group>) -> InlineKeyboardMarkup 
 
     if let Some(group) = data {
         keyboard
-            .url("Telegram", &format!("https://t.me/{}", group.telegram))
+            .url(
+                "Telegram",
+                &format!("https://t.me/{}", &group.telegram[1..]),
+            )
             .unwrap();
 
         if group.link.is_some() {
